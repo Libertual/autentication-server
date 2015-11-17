@@ -25,7 +25,6 @@
   },
   "homepage": "https://github.com/Libertual/auth-server#readme",
   "dependencies": {
-    "api-helpers": "^1.1.0",
     "body": "^5.1.0",
     "course": "0.0.1",
     "mongoose": "^4.2.5",
@@ -33,6 +32,8 @@
   },
   "devDependencies": {
     "babel": "^6.1.18",
-    "babel-preset-es2015": "^6.1.18"
+    "babel-core": "^6.1.21",
+    "babel-preset-es2015": "^6.1.18",
+    "gulp-eslint": "^1.1.0"
   }
 }
