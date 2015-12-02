@@ -1,8 +1,8 @@
 {
   "name": "auth-server",
   "version": "1.0.0",
-  "description": "API RestFull Authentication server in node.js, MongoDB and ES6",
-  "main": "index.js",
+  "description": "API RestFull Autentication ssed on stellizer powered by node.js, MongoDB and ES6",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,31 +12,27 @@
   },
   "keywords": [
     "Authentication",
-    "MongoDB",
     "ES6",
-    "Node.js",
     "API",
-    "RestFull"
+    "RESTFULL"
   ],
-  "author": "Libertual (peterworld@gmail.com)",
+  "author": "Libertual (libertual@tecnual.com)",
   "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/Libertual/auth-server/issues"
   },
   "homepage": "https://github.com/Libertual/auth-server#readme",
   "dependencies": {
-    "api-helpers": "^1.1.0",
-    "body": "^5.1.0",
-    "course": "0.0.1",
+    "async": "^1.5.0",
+    "bcryptjs": "^2.3.0",
+    "body-parser": "^1.14.1",
+    "colors": "^1.1.2",
+    "cors": "^2.7.1",
     "express": "^4.13.3",
-    "jwt-simple": "^0.3.1",
+    "jwt-simple": "^0.4.0",
     "moment": "^2.10.6",
-    "mongoose": "^4.2.5",
-    "winston": "^2.1.0"
-  },
-  "devDependencies": {
-    "babel": "^6.1.18",
-    "babel-core": "^6.2.0",
-    "babel-preset-es2015": "^6.1.18"
+    "mongoose": "^4.2.8",
+    "morgan": "^1.6.1",
+    "request": "^2.67.0"
   }
 }
