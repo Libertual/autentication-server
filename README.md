@@ -1,2 +1,2 @@
 # autentication-server
-API RestFull Autentication server in node.js, MongoDB and ES6
+API RestFull Autentication ssed on stellizer powered by node.js, MongoDB and ES6

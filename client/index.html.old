@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="MyApp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="Libertual">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Tecnual.com</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <link href="//fonts.googleapis.com/css?family=Roboto|Montserrat:400,700|Open+Sans:400,300,600" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+    <link href="//cdn.jsdelivr.net/animatecss/3.2.0/animate.css" rel="stylesheet">
+    <link href="/stylesheets/angular-toastr.css" rel="stylesheet">
+    <link href="/stylesheets/style.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="/stylesheets/carousel.css" rel="stylesheet">
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+    <nav ng-controller="NavbarCtrl" class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/#/">Tecnual</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li ng-class="{active: isActive('/')}"><a href="/#/">Home <span class="sr-only">(current)</span></a></li>
+            <li ng-if="isAuthenticated()" ng-class="{active: isActive('/profile')}"><a href="/#/profile">Profile</a></li>
+          </ul>
+          <ul ng-if="!isAuthenticated()" class="nav navbar-nav navbar-right">
+            <li ng-class="{active: isActive('/login')}"><a href="/#/login">Login</a></li>
+            <li ng-class="{active: isActive('/signupA')}"><a href="/#/signup">Sign up</a></li>
+          </ul>
+          <ul ng-if="isAuthenticated()" class="nav navbar-nav navbar-right">
+            <li ><a href="/#/logout">Logout</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+<div ui-view></div>
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2015 Tecnual. &middot; <a href="/#/">Privacy</a> &middot; <a href="/#/">Terms</a></p>
+      </footer>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <!-- Third-party Libraries -->
+    <script src="/vendor/angular.js"></script>
+    <script src="/vendor/angular-animate.js"></script>
+    <script src="/vendor/angular-messages.js"></script>
+    <script src="/vendor/angular-resource.js"></script>
+    <script src="/vendor/angular-sanitize.js"></script>
+    <script src="/vendor/angular-ui-router.js"></script>
+    <script src="/vendor/angular-toastr.tpls.js"></script>
+    <script src="/vendor/satellizer.js"></script>
+
+    <!-- Application Code -->
+    <script src="/app.js"></script>
+    <script src="/directives/passwordStrength.js"></script>
+    <script src="/directives/passwordMatch.js"></script>
+    <script src="/controllers/home.js"></script>
+    <script src="/controllers/login.js"></script>
+    <script src="/controllers/signup.js"></script>
+    <script src="/controllers/logout.js"></script>
+    <script src="/controllers/profile.js"></script>
+    <script src="/controllers/navbar.js"></script>
+    <script src="/services/account.js"></script>
+
+
+
+  </body>
+</html>
